@@ -56,3 +56,15 @@ static void Main1(string[] args)
         Console.WriteLine($"{i + 1} qator: " + counter);
     }
 }
+
+static void Main3(string[] args)
+{
+    int[] ints = { 1, 2, 3, 4, 5 };
+
+    string counter = "";
+    for (int i = 0; i < ints.Length; i++)
+    {
+        counter = Convert.ToString(ints[i] + " ") + counter;
+    }
+    Console.WriteLine(counter);
+}
