@@ -68,3 +68,38 @@ static void Main3(string[] args)
     }
     Console.WriteLine(counter);
 }
+
+
+static void Main4(string[] args)
+{
+    int[,] ints = new int[4, 3];
+
+    for (int i = 0; i < ints.GetLength(0); i++)
+    {
+        for (int j = 0; j < ints.GetLength(1); j++)
+        {
+            Random rnd = new Random();
+            ints[i, j] = rnd.Next(1, 10);
+        }
+    }
+
+    for (int i = 0; i < ints.GetLength(0); i++)
+    {
+        for (int j = 0; j < ints.GetLength(1); j++)
+        {
+            Console.Write(ints[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+
+    for (int i = 0; i < ints.GetLength(0); i++)
+    {
+        int max = ints[i, 0];
+        for (int j = 0; j < ints.GetLength(1); j++)
+        {
+            if (ints[i, j] > max) max = ints[i, j];
+        }
+        Console.WriteLine($" {i + 1} qator: " + max);
+    }
+
+}
