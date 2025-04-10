@@ -134,3 +134,5 @@ static void Main5(string[] args)
         Console.WriteLine();
     }
 }
+
+Console.WriteLine("Hello, World!");
