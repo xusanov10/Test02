@@ -103,3 +103,34 @@ static void Main4(string[] args)
     }
 
 }
+
+static void Main5(string[] args)
+{
+    int cros = Convert.ToInt32(Console.ReadLine());
+
+    int[][] jaggedArray = new int[cros][];
+
+    Console.WriteLine();
+
+    for (int i = 0; i < cros; i++)
+    {
+        int jagged = Convert.ToInt32(Console.ReadLine());
+
+        jaggedArray[i] = new int[jagged];
+
+        for (int j = 0; j < jagged; j++)
+        {
+            jaggedArray[i][j] = Convert.ToInt32(Console.Read() + " ");
+        }
+    }
+    Console.WriteLine();
+
+    for (int i = 0; i < jaggedArray.Length; i++)
+    {
+        for (int j = 0; j < jaggedArray[i].Length; j++)
+        {
+            Console.Write(jaggedArray[i][j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
